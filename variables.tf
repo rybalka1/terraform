@@ -1,0 +1,2 @@
+variable "ya_token" {
+}
