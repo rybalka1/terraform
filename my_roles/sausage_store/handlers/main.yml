@@ -1,0 +1,12 @@
+---
+- name: Restart service sausage-store-frontend.service
+  ansible.builtin.systemd:
+    state: restarted
+    daemon_reload: yes
+    name: sausage-store-frontend.service
+
+- name: Restart service sausage-store-backend.service
+  ansible.builtin.systemd:
+    state: restarted
+    daemon_reload: yes
+    name: sausage-store-backend.service

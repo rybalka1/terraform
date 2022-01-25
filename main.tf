@@ -23,11 +23,11 @@ resource "yandex_compute_instance" "vm-1" {
 
   network_interface {
     subnet_id = var.ya_subnet_id
-    nat       = false
+    nat       = true
   }
 
   metadata = {
-    user-data = "${file("./meta.txt")}"
+    user-data = "${file("./meta.yml")}"
   }
 }
 

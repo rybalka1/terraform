@@ -1,0 +1,6 @@
+---
+- name: Playbook for sausage_store host
+  hosts: "{{ target | default('all') }}"
+  become: true
+  roles:
+    - role: sausage_store

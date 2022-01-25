@@ -1,0 +1,15 @@
+[Unit]
+Description=Sausage-store-frontend
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www-data/
+Environment=LOG_PATH=/var/log
+StandardOutput=file:/var/log/out.log
+StandardError=file:/var/log/error.log
+Restart=always
+ExecStart=/usr/bin/http-server \
+/usr/bin/http-server -p 80 --proxy http://localhost:8080 /var/www-data/
+
+[Install]
+WantedBy=multi-user.target

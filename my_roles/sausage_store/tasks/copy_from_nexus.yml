@@ -1,0 +1,18 @@
+---
+- name: Download backend
+  get_url:
+    url: https://{{ nexus_backend_url }}/{{ backend_version }}/sausage-store-{{ backend_version }}.jar
+    dest: /home/jarservice/sausage-store.jar
+    group: jarservice
+    owner: jarservice
+    username: '{{ nexus_user }}'
+    password: '{{ nexus_password }}'
+
+- name: Download frontend
+  get_url:
+    url: https://{{ nexus_frontend_url }}/{{ frontend_version }}/sausage-store-{{ frontend_version }}.tar.gz
+    dest: /home/jarservice/sausage-store.tar.gz
+    group: jarservice
+    owner: jarservice
+    username: '{{ nexus_user }}'
+    password: '{{ nexus_password }}'
