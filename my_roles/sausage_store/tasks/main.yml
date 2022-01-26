@@ -1,0 +1,9 @@
+---
+- include_vars: packages_list.yml
+- include: add_users.yml
+- include: create_dir.yml
+- include: copy_from_nexus.yml
+- include: extract_arhives.yml
+- include: install_package.yml
+- include: add_repo_nodejs.yml
+- include: copy_template.yml

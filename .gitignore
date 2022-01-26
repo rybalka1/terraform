@@ -3,3 +3,6 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+
+pyproject.toml
+poetry.lock

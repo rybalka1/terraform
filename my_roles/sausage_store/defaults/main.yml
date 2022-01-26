@@ -1,0 +1,5 @@
+---
+timezone: Europe/Moscow
+timeserver: pool.ntp.org
+smtp_server: mail.example.com
+sysadmin_mailbox: sysadmin@example.com

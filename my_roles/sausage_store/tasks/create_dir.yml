@@ -1,0 +1,8 @@
+---
+- name: Create dir www-data
+  ansible.builtin.file:
+    path: /var/www-data
+    state: directory
+    mode: '0755'
+    owner: www-data
+    group: www-data

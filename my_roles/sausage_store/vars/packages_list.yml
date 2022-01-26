@@ -1,0 +1,7 @@
+---
+base_packages:
+  - npm
+  - openjdk-16-jdk
+  - tmux
+  - dnsutils
+  - tcpdump

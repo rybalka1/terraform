@@ -1,0 +1,11 @@
+---
+- name: Extract frontend
+  ansible.builtin.shell: |
+    tar -xvzf /home/jarservice/sausage-store.tar.gz -C /home/jarservice/
+    cp /home/jarservice/sausage-store-{{ frontend_version }}/public_html/* /var/www-data/
+    chown -R www-data:www-data /var/www-data/*
+
+- name: Install "http-server" node.js package globally.
+  community.general.npm:
+    name: http-server
+    global: yes

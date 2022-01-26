@@ -1,0 +1,15 @@
+---
+- name: Add the user 'jarservice'
+  ansible.builtin.user:
+    name: jarservice
+    password: jarservice_password
+    shell: /bin/bash
+    append: yes
+    groups: sudo
+
+- name: Add the user 'www-data'
+  ansible.builtin.user:
+    name: www-data
+    password: www-data_password
+    shell: /bin/bash
+    append: yes
