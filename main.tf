@@ -5,6 +5,16 @@ terraform {
       version = "0.61.0"
     }
   }
+  backend "s3" {
+        endpoint   = "storage.yandexcloud.net"
+        bucket     = "rybalka-dmitrii-chapter-7-lesson-1"
+        region     = "ru-central1-a"
+        key        = "terraform_state.tfstate"
+        # access_key = var.access_key
+        # secret_key = var.secret_key
+        skip_region_validation      = true
+        skip_credentials_validation = true
+    }
 }
 
 resource "yandex_compute_instance" "vm-1" {
